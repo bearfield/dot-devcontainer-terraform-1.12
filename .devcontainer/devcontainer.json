@@ -1,0 +1,62 @@
+{
+    "name": "terraform-1.12",
+    "image": "ghcr.io/bearfield/terraform:1.12",
+    "remoteUser": "kumano_ryo",
+    "mounts": [
+        "source=${localEnv:HOME}/devcontainer_conf/.gitconfig_linux,target=/home/kumano_ryo/.gitconfig,type=bind,consistency=cached",
+        "source=${localEnv:HOME}/.config/gcloud,target=/home/kumano_ryo/.config/gcloud,type=bind,consistency=cached",
+        "source=${localEnv:HOME}/.ssh,target=/home/kumano_ryo/.ssh,type=bind,consistency=cached"
+    ],
+    "features": {
+        "ghcr.io/devcontainers/features/docker-outside-of-docker:1": {
+            "version": "latest",
+            "enableNonRootDocker": "true",
+            "moby": "true"
+        }
+    },
+    "customizations": {
+        "vscode": {
+            "settings": {
+                "terminal.integrated.profiles.linux": {
+                    "fish": {
+                        "path": "fish"
+                    }
+                },
+                "terminal.integrated.fontFamily": "Hack Nerd Font Mono,Source Code Pro for Powerline",
+                "workbench.colorCustomizations": {
+                    "statusBar.background": "#7B42BC",
+                    "statusBar.foreground": "#FFFFFF"
+                },
+                "[terraform]": {
+                    "editor.formatOnSave": true,
+                    "editor.suggest.preview": true,
+                    "editor.defaultFormatter": "hashicorp.terraform",
+                    "editor.formatOnSaveMode": "file"
+                },
+                "[terraform-vars]": {
+                    "editor.defaultFormatter": "hashicorp.terraform",
+                    "editor.formatOnSave": true,
+                    "editor.formatOnSaveMode": "file"
+                },
+                "terraform.codelens.referenceCount": true
+            },
+            "extensions": [
+                "wayou.vscode-todo-highlight",
+                "redhat.vscode-yaml",
+                "timonwong.shellcheck",
+                "foxundermoon.shell-format",
+                "github.copilot",
+                "bmalehorn.vscode-fish",
+                "ms-vscode.makefile-tools",
+                "eamodio.gitlens",
+                "github.vscode-pull-request-github",
+                "ms-azuretools.vscode-docker",
+                "docker.docker",
+                "github.vscode-github-actions",
+                "github.copilot-chat",
+                "aquasecurityofficial.trivy-vulnerability-scanner",
+                "hashicorp.terraform"
+            ]
+        }
+    }
+}
