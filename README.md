@@ -184,10 +184,10 @@ docker run -it --rm \
 ### 自動マウントされる設定
 | ローカルパス | コンテナ内パス | 用途 |
 |-------------|---------------|------|
-| ~/.gitconfig | /home/vscode/.gitconfig | Git設定 |
-| ~/.ssh | /home/vscode/.ssh | SSH鍵 |
-| ~/.config/gcloud | /home/vscode/.config/gcloud | GCloud認証 |
-| ~/.config/gh | /home/vscode/.config/gh | GitHub CLI認証 |
+| ~/devcontainer_conf/.gitconfig_linux | /home/kumano_ryo/.gitconfig | Git設定 |
+| ~/.ssh | /home/kumano_ryo/.ssh | SSH鍵 |
+| ~/.config/gcloud | /home/kumano_ryo/.config/gcloud | GCloud認証 |
+| ~/.claude | /home/kumano_ryo/.claude | Claude設定 |
 
 ### エディタ設定
 - 保存時の自動フォーマット（Terraform）
@@ -232,14 +232,6 @@ terraform version
 ls -la ~/.ssh
 ls -la ~/.gitconfig
 ```
-
-## 貢献
-
-プルリクエストを歓迎します！以下の点にご注意ください：
-
-1. 新機能追加の際はissueで事前に相談
-2. コードフォーマットは既存のスタイルに従う
-3. テストはローカルで `make test` を実行
 
 ## 関連プロジェクト
 
