@@ -1,6 +1,6 @@
 # dot-devcontainer-terraform-1.12
 
-[![terraform-1.12 docker container image creation](https://github.com/kumanoryo/dot-devcontainer-terraform-1.12/actions/workflows/terraform-1.12.yaml/badge.svg)](https://github.com/kumanoryo/dot-devcontainer-terraform-1.12/actions/workflows/terraform-1.12.yaml)
+[![terraform-1.12 docker container image creation](https://github.com/bearfield/dot-devcontainer-terraform-1.12/actions/workflows/terraform-1.12.yaml/badge.svg)](https://github.com/bearfield/dot-devcontainer-terraform-1.12/actions/workflows/terraform-1.12.yaml)
 
 Terraform 1.12開発環境用のDockerコンテナプロジェクトです。VS Code Dev Container対応で、すぐに開発を始められます。
 
@@ -143,7 +143,7 @@ flowchart LR
 
 1. **リポジトリのクローン**
    ```bash
-   git clone https://github.com/kumanoryo/dot-devcontainer-terraform-1.12.git
+   git clone https://github.com/bearfield/dot-devcontainer-terraform-1.12.git
    cd dot-devcontainer-terraform-1.12
    ```
 
@@ -235,7 +235,7 @@ ls -la ~/.gitconfig
 
 ## 関連プロジェクト
 
-- [dot-devcontainer-debian-fish-bookworm](https://github.com/kumanoryo/dot-devcontainer-debian-fish-bookworm) - ベースとなるDebian + Fish環境
+- [dot-devcontainer-debian-fish-bookworm](https://github.com/bearfield/dot-devcontainer-debian-fish-bookworm) - ベースとなるDebian + Fish環境
 - [Terraform公式ドキュメント](https://www.terraform.io/docs) - Terraformの使い方
 
 ## ライセンス
