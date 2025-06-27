@@ -27,6 +27,8 @@ The project consists of:
 - **Dockerfile** (`docker/Dockerfile`): Multi-stage build that installs Terraform 1.12.*, tflint, and trivy on a Debian base with Fish shell
 - **Makefile**: Provides cross-platform build targets for ARM64 and AMD64 architectures
 - **Container Registry**: Images are tagged for `ghcr.io/bearfield/terraform:test.1.12`
+- **VS Code Dev Container** (`.devcontainer/devcontainer.json`): Pre-configured development environment with Terraform extensions
+- **GitHub Actions** (`.github/workflows/terraform-1.12.yaml`): Automated daily builds for ARM64 and AMD64 architectures
 
 ## Container Details
 
@@ -35,3 +37,17 @@ The container includes:
 - Terraform version: 1.12.*
 - Additional tools: tflint (Terraform linter), trivy (security scanner)
 - Shell: Fish shell with Debian environment
+- User: kumano_ryo (UID: 1000)
+
+## Development Workflow
+
+1. **Local Development**: Use VS Code Dev Container for consistent environment
+2. **Testing**: Run `make test` to build and verify images locally
+3. **CI/CD**: GitHub Actions automatically builds and pushes images daily at 19:00 UTC
+
+## Important Notes
+
+- The production images are published to `ghcr.io/bearfield/terraform:1.12`
+- Test images use the `test.1.12` tag prefix
+- Both ARM64 and AMD64 architectures are supported
+- The container includes Docker-outside-of-Docker functionality for nested container operations
