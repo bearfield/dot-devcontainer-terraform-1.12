@@ -43,7 +43,7 @@ The container includes:
 
 1. **Local Development**: Use VS Code Dev Container for consistent environment
 2. **Testing**: Run `make test` to build and verify images locally
-3. **CI/CD**: GitHub Actions automatically builds and pushes images daily at 18:00 UTC
+3. **CI/CD**: GitHub Actions automatically builds and pushes images daily at 19:00 UTC
 
 ## Important Notes
 
