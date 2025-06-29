@@ -28,7 +28,7 @@ The project consists of:
 - **Makefile**: Provides cross-platform build targets for ARM64 and AMD64 architectures
 - **Container Registry**: Images are tagged for `ghcr.io/bearfield/terraform:test.1.12`
 - **VS Code Dev Container** (`.devcontainer/devcontainer.json`): Pre-configured development environment with Terraform extensions
-- **GitHub Actions** (`.github/workflows/terraform-1.12.yaml`): Automated daily builds for ARM64 and AMD64 architectures
+- **GitHub Actions** (`.github/workflows/terraform-1.12.yaml`): Automated daily builds for ARM64 and AMD64 architectures with path-based filtering
 
 ## Container Details
 
@@ -43,7 +43,7 @@ The container includes:
 
 1. **Local Development**: Use VS Code Dev Container for consistent environment
 2. **Testing**: Run `make test` to build and verify images locally
-3. **CI/CD**: GitHub Actions automatically builds and pushes images daily at 19:00 UTC
+3. **CI/CD**: GitHub Actions automatically builds and pushes images daily at 19:00 UTC and on push to main (when docker/** or workflow files change)
 
 ## Important Notes
 
