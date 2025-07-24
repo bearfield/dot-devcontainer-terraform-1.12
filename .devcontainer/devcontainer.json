@@ -29,6 +29,16 @@
                     "statusBar.background": "#7B42BC",
                     "statusBar.foreground": "#FFFFFF"
                 },
+                "python.defaultInterpreterPath": "uv",
+                "python.linting.enabled": true,
+                "python.linting.pylintEnabled": true,
+                "python.linting.flake8Enabled": true,
+                "python.linting.mypyEnabled": true,
+                "python.linting.lintOnSave": true,
+                "python.formatting.provider": "black",
+                "python.linting.pylintArgs": ["--max-line-length=100"],
+                "python.linting.flake8Args": ["--max-line-length=100"],
+                "python.linting.mypyArgs": ["--ignore-missing-imports"],
                 "[terraform]": {
                     "editor.formatOnSave": true,
                     "editor.suggest.preview": true,
@@ -59,6 +69,8 @@
                 "vstirbu.vscode-mermaid-preview",
                 "anthropic.claude-code",
                 "aquasecurityofficial.trivy-vulnerability-scanner",
+                "ms-python.python",
+                "saoudrizwan.claude-dev",
                 "hashicorp.terraform"
             ]
         }
